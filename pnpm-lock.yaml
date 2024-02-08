@@ -23,6 +23,9 @@ dependencies:
   rxjs:
     specifier: ^7.8.1
     version: 7.8.1
+  rxjs-hooks:
+    specifier: 0.8.0-alpha.0
+    version: 0.8.0-alpha.0(react@18.2.0)(rxjs@7.8.1)
 
 devDependencies:
   '@types/react':
@@ -2562,6 +2565,19 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /rxjs-hooks@0.8.0-alpha.0(react@18.2.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-rgHaHEJPVsEZhqjHjEMu1k/7CxxmkGaaRXOBHySaN8a1web7WGL28XUylDVDerlXj1mUkPIz/LI7GfNfeLkQVQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+      rxjs: '>=7.0.0'
+    dependencies:
+      react: 18.2.0
+      rxjs: 7.8.1
+      tslib: 2.6.2
+      use-constant: 1.1.1(react@18.2.0)
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
@@ -2721,6 +2737,22 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
+
+  /use-constant@1.1.1(react@18.2.0):
+    resolution: {integrity: sha512-sy2ttlE4kuAnNbp2P6a5aTZiGYwsZojkqaGZ31yDDjIurteUS8GOcYiPGmJ3y/LHOHkdazDdVRBZPzH3RZHffA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /vite@5.0.12:
     resolution: {integrity: sha512-4hsnEkG3q0N4Tzf1+t6NdN9dg/L3BM+q8SWgbSPnJvrgH2kgdyzfVJwbR1ic69/4uMJJ/3dqDZZE5/WwqW8U1w==}

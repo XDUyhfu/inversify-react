@@ -1,28 +1,38 @@
 import React from "react";
-import { Tabs } from "antd";
+import { Button, Space, Tabs } from "antd";
 import type { TabsProps } from "antd";
+import { container, TabState } from "./state";
+import { useObservable } from "rxjs-hooks";
+
+const TabItem = ({ platform }: { platform: string }) => {
+  const state = container.get<TabState>(Symbol.for(platform));
+  const count = useObservable(() => state.count$);
+
+  return (
+    <Space direction="vertical">
+      <div>{platform}</div>
+      <div>{count}</div>
+      <Button onClick={() => state.add(1)}>+1</Button>
+    </Space>
+  );
+};
 
 const items: TabsProps["items"] = [
   {
-    key: "1",
-    label: "Tab 1",
-    children: "Content of Tab Pane 1",
+    key: "BP",
+    label: "BP",
+    children: <TabItem platform="BP" />,
   },
   {
-    key: "2",
-    label: "Tab 2",
-    children: "Content of Tab Pane 2",
-  },
-  {
-    key: "3",
-    label: "Tab 3",
-    children: "Content of Tab Pane 3",
+    key: "VOLC",
+    label: "VOLC",
+    children: <TabItem platform="VOLC" />,
   },
 ];
 
 const App: React.FC = () => (
   <Tabs
-    defaultActiveKey="1"
+    defaultActiveKey="BP"
     items={items}
     onChange={(key: string) => {
       console.log(key);
