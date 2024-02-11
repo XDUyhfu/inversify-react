@@ -8,4 +8,5 @@ export interface TabState {
 export const Symbols = {
   BP: Symbol.for("BP"),
   VOLC: Symbol.for("VOLC"),
+  Factory: Symbol.for("Factory"),
 };
