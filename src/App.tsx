@@ -1,33 +1,10 @@
 import React from "react";
-import { Tabs } from "antd";
-import type { TabsProps } from "antd";
-import { container, TabItemModel } from "./state";
+import { container } from "./state";
 import { Symbols } from "./state/type";
+import { TabWidget } from "./state/widget";
 
-const TabItem = container.get<TabItemModel>(Symbols.TabItemModel);
+const widget = container.get<TabWidget>(Symbols.TabWidget);
 
-const items: TabsProps["items"] = [
-  {
-    key: "BP",
-    label: "BP",
-    children: TabItem.view("BP"),
-  },
-  {
-    key: "VOLC",
-    label: "VOLC",
-    children: TabItem.view("VOLC"),
-  },
-];
-
-const App: React.FC = () => (
-  <Tabs
-    // destroyInactiveTabPane
-    defaultActiveKey="BP"
-    items={items}
-    onChange={(key: string) => {
-      console.log(key);
-    }}
-  />
-);
+const App: React.FC = () => widget.render();
 
 export default App;

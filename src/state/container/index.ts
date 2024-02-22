@@ -3,6 +3,7 @@ import { Symbols, TabState } from "../type";
 import { BP } from "../BP";
 import { VOLC } from "../VOLC";
 import { TabItemModel } from "../model";
+import { TabWidget } from "../widget";
 
 export const container = new Container();
 
@@ -14,3 +15,4 @@ container
   .toFactory<TabState, ["BP" | "VOLC"]>(() => (platform): TabState => {
     return container.get(platform === "BP" ? Symbols.BP : Symbols.VOLC);
   });
+container.bind<TabWidget>(Symbols.TabWidget).to(TabWidget);

@@ -10,4 +10,5 @@ export const Symbols = {
   VOLC: Symbol.for("VOLC"),
   Factory: Symbol.for("Factory"),
   TabItemModel: Symbol.for("TabItemModel"),
+  TabWidget: Symbol.for("TabWidget"),
 };

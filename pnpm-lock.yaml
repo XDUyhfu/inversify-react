@@ -11,6 +11,9 @@ dependencies:
   '@babel/plugin-proposal-decorators':
     specifier: ^7.23.9
     version: 7.23.9(@babel/core@7.23.9)
+  '@ngify/http':
+    specifier: ^1.6.0
+    version: 1.6.0(miniprogram-api-typings@3.12.0)(rxjs@7.8.1)
   antd:
     specifier: ^5.14.0
     version: 5.14.0(react-dom@18.2.0)(react@18.2.0)
@@ -732,6 +735,22 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@ngify/http@1.6.0(miniprogram-api-typings@3.12.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-8tm2NuxMjJVeVl5rhljbB/Ql3VJzlhdhj0h1gZ21EnIWdzi+e9eJ3ApR8G5azyBTcMLyNwKgkSyq78w1uZl4Bg==}
+    peerDependencies:
+      miniprogram-api-typings: 3.12.0
+      rxjs: ^7.0.0
+    dependencies:
+      '@ngify/types': 1.6.0
+      miniprogram-api-typings: 3.12.0
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ngify/types@1.6.0:
+    resolution: {integrity: sha512-Nvq8LJM8aWcAPjY7sTRH2b9o22MAbtkX9RLA0kkICuIMgw5MJzYROp1TzkvnIO0GaLnzEoVKARD4vJP6ZDBqtw==}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1898,6 +1917,10 @@ packages:
     dependencies:
       brace-expansion: 2.0.1
     dev: true
+
+  /miniprogram-api-typings@3.12.0:
+    resolution: {integrity: sha512-tE0zjq+3bFEgUROzCjXTdtLY+FmqiTX4kZWXc8bCC7M9wSHCriBz+ga1E2i1PcI+DQJoz2cyK8Cv2exJv6XEzA==}
+    dev: false
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
